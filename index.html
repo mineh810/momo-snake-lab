@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Momo Snake Lab</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: #050609;
+        color: #f8fafc;
+      }
+      body {
+        min-height: 100vh;
+        margin: 0;
+        display: grid;
+        place-items: center;
+        background:
+          radial-gradient(circle at 20% 10%, rgba(52, 211, 153, 0.18), transparent 34rem),
+          radial-gradient(circle at 80% 20%, rgba(129, 140, 248, 0.16), transparent 30rem),
+          #050609;
+      }
+      main {
+        width: min(880px, calc(100vw - 32px));
+        border: 1px solid rgba(148, 163, 184, 0.18);
+        border-radius: 28px;
+        padding: 40px;
+        background: rgba(15, 23, 42, 0.68);
+        box-shadow: 0 24px 90px rgba(0, 0, 0, 0.45);
+        backdrop-filter: blur(18px);
+      }
+      .pill {
+        display: inline-flex;
+        gap: 8px;
+        align-items: center;
+        padding: 7px 12px;
+        border: 1px solid rgba(52, 211, 153, 0.28);
+        border-radius: 999px;
+        color: #a7f3d0;
+        background: rgba(6, 78, 59, 0.18);
+        font-size: 13px;
+      }
+      h1 {
+        margin: 24px 0 12px;
+        font-size: clamp(42px, 8vw, 88px);
+        letter-spacing: -0.07em;
+        line-height: 0.92;
+      }
+      p {
+        max-width: 620px;
+        color: #94a3b8;
+        font-size: 18px;
+        line-height: 1.65;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+        margin-top: 32px;
+      }
+      .card {
+        border: 1px solid rgba(148, 163, 184, 0.16);
+        border-radius: 18px;
+        padding: 18px;
+        background: rgba(2, 6, 23, 0.42);
+      }
+      .label { color: #64748b; font-size: 12px; text-transform: uppercase; letter-spacing: 0.12em; }
+      .value { margin-top: 8px; font-size: 22px; font-weight: 700; }
+      @media (max-width: 720px) { main { padding: 28px; } .grid { grid-template-columns: 1fr; } }
+    </style>
+  </head>
+  <body>
+    <main>
+      <span class="pill">● GitHub Pages smoke test</span>
+      <h1>Momo Snake Lab</h1>
+      <p>
+        Halo. This is the default GitHub-native Pages deployment test for the upcoming
+        Silicon Valley AI-startup style Snake MVP.
+      </p>
+      <section class="grid" aria-label="deployment status cards">
+        <div class="card"><div class="label">Repo</div><div class="value">momo-snake-lab</div></div>
+        <div class="card"><div class="label">Deploy</div><div class="value">GitHub Actions</div></div>
+        <div class="card"><div class="label">Status</div><div class="value">Halo online</div></div>
+      </section>
+    </main>
+  </body>
+</html>
